@@ -5,7 +5,7 @@ export default function InventoryForm() {
   const { jwtToken } = useOutletContext();
   const [formData, setFormData] = useState({
     title: '',
-    category: 'Apparel', //default is Apparel
+    category: 'Apparel', // default is Apparel
     storage_location: '',
     quantity: '',
     notes: '',
@@ -15,7 +15,6 @@ export default function InventoryForm() {
   const navigate = useNavigate();
 
   const categories = [
-    //possible categories, change on backend too if changing this
     'Apparel',
     'Sport',
     'Technology',
@@ -48,7 +47,7 @@ export default function InventoryForm() {
       const data = await response.json();
 
       if (response.status === 422) {
-        setErrorMessages(data.errors); //validation errors
+        setErrorMessages(data.errors); // validation errors
         setSuccessMessage(null);
       } else if (!response.ok) {
         setErrorMessages(['There was an error. Please try again later.']);
@@ -64,9 +63,8 @@ export default function InventoryForm() {
           notes: '',
         });
 
-        //CHANGE
-        //redirect to another page after success, if needed
-        //navigate('/some-page');
+        //
+        navigate(`/inventory-info/${data.id}`);
       }
     } catch (err) {
       setErrorMessages(['Network error. Please try again later.']);
