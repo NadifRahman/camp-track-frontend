@@ -89,7 +89,11 @@ export default function Login() {
         <div className="mb-3 d-flex justify-content-between align-items-center">
           <small>
             Don't have an account? <Link to="/sign-up">Sign up</Link>
+            <div>
+              For demo purposes, you may use Username: demo and Password: demo
+            </div>
           </small>
+
           <button
             type="submit"
             className={`${loginStyle.button} btn btn-primary btn-sm`}

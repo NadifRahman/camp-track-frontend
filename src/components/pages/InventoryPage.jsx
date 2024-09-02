@@ -26,6 +26,7 @@ export default function InventoryInfo() {
             headers: {
               Authorization: `Bearer ${jwtToken}`,
             },
+            mode: 'cors',
           }
         );
 

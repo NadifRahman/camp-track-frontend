@@ -20,6 +20,7 @@ export default function AttendanceEdit() {
             headers: {
               Authorization: `Bearer ${jwtToken}`,
             },
+            mode: 'cors',
           }
         );
         const data = await response.json();
@@ -76,6 +77,7 @@ export default function AttendanceEdit() {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${jwtToken}`,
           },
+          mode: 'cors',
           body: JSON.stringify({
             id: attendanceData._id,
             attendance: attendanceData.attendance.map((camper) => ({

@@ -28,6 +28,7 @@ export default function CamperList() {
             headers: {
               Authorization: `Bearer ${jwtToken}`,
             },
+            mode: 'cors',
           }
         );
 

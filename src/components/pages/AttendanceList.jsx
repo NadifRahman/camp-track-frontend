@@ -18,6 +18,7 @@ export default function AttendanceList() {
             headers: {
               Authorization: `Bearer ${jwtToken}`,
             },
+            mode: 'cors',
           }
         );
 

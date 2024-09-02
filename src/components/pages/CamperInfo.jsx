@@ -23,6 +23,7 @@ export default function CamperInfo() {
             headers: {
               Authorization: `Bearer ${jwtToken}`,
             },
+            mode: 'cors',
           }
         );
 

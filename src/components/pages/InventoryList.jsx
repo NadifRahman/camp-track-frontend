@@ -31,6 +31,7 @@ export default function InventoryList() {
             headers: {
               Authorization: `Bearer ${jwtToken}`,
             },
+            mode: 'cors',
           }
         );
 
