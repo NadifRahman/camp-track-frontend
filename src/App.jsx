@@ -4,17 +4,16 @@ import './bootstrap.min.css';
 import Navbar from './components/general/Navbar';
 
 function App() {
-  const [jwtToken, setJwtToken] = useState(null); //JWT TOKEN IS EITHER NULL OR THE ACTUAL TOKEN
-  //NULL MEANS USER IS NOT LOGGED IN
+  const [jwtToken, setJwtToken] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    //attempt to get from local storage
-    let fetchedFromStorage = localStorage.getItem('jwtToken');
+    const fetchedFromStorage = localStorage.getItem('jwtToken');
     setJwtToken(fetchedFromStorage);
-  });
+    setLoading(false); // Set loading to false after token is fetched
+  }, []);
 
   function setToken(token) {
-    //only set via this
     localStorage.setItem('jwtToken', token);
     setJwtToken(token);
   }
@@ -22,6 +21,10 @@ function App() {
   function logOut() {
     localStorage.removeItem('jwtToken');
     setJwtToken(null);
+  }
+
+  if (loading) {
+    return <div>Loading...</div>; // Show a loading message or spinner
   }
 
   return (
