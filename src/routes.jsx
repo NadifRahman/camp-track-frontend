@@ -2,6 +2,7 @@ import App from './App';
 import Home from './components/pages/Home';
 import Signup from './components/pages/Signup';
 import Login from './components/pages/Login';
+import CamperForm from './components/pages/CamperForm';
 
 const routes = [
   {
@@ -16,6 +17,10 @@ const routes = [
       {
         path: 'log-in',
         element: <Login />,
+      },
+      {
+        path: 'camper-form',
+        element: <CamperForm />,
       },
     ],
   },

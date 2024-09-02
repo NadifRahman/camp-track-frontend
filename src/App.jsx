@@ -27,7 +27,6 @@ function App() {
   return (
     <>
       <Navbar jwtToken={jwtToken} logOut={logOut}></Navbar>
-      <div>hi</div>
       <Outlet context={{ jwtToken, setToken, logOut }} />
     </>
   );
