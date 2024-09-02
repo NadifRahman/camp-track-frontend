@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useOutletContext } from 'react-router-dom';
+import { useOutletContext, useNavigate } from 'react-router-dom';
 
 export default function AttendanceForm() {
   const { jwtToken } = useOutletContext();
@@ -7,6 +7,7 @@ export default function AttendanceForm() {
   const [errorMessages, setErrorMessages] = useState(null);
   const [successMessage, setSuccessMessage] = useState(null);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate(); // Hook for navigation
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,7 +38,9 @@ export default function AttendanceForm() {
         setSuccessMessage('Attendance record created successfully!');
         setErrorMessages(null);
         setDate('');
-        //add navigation here CHANGE TO THE ATTENDANCE PAGE
+
+        // Navigate to the attendance page after creation
+        navigate(`/attendance/${data.id}`);
       }
     } catch (err) {
       setErrorMessages(['There was a network error. Please try again later.']);
