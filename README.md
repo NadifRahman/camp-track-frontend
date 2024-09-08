@@ -10,7 +10,7 @@
 </h1>
 
 <h4 align="center">A software solution for camp management</h4>
-<h6 align="center">Please check the <a href="https://github.com/NadifRahman/camp-track-frontend">backend repo</a> for the full README</h4>
+<h6 align="center">Please check the <a href="https://github.com/NadifRahman/camp-track-backend">backend repo</a> for the full README</h4>
 
 ![screenshot](https://i.imgur.com/lIENQNy.gif)
 
