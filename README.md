@@ -1,8 +1,17 @@
-# React + Vite
+<h1 align="center">
+  <br>
+  
+  <a href="https://camptrack.vercel.app/"><p align="center">
+  <img src="https://raw.githubusercontent.com/NadifRahman/camp-track-frontend/main/public/camp-track-icon.png" alt="Camp Track" width="200">
+  </p></a>
+  <br>
+  Camp Track
+  <br>
+</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h4 align="center">A software solution for camp management</h4>
+<h6 align="center">Please check the <a href="https://github.com/NadifRahman/camp-track-frontend">backend repo</a> for the full README</h4>
 
-Currently, two official plugins are available:
+![screenshot](https://i.imgur.com/lIENQNy.gif)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
